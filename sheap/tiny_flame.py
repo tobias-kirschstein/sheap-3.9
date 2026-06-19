@@ -4,6 +4,7 @@ import torch
 import torch.nn.functional as F
 from roma import rotvec_to_rotmat
 from torch import nn
+from typing import Union
 
 
 class TinyFlame(nn.Module):
@@ -17,8 +18,8 @@ class TinyFlame(nn.Module):
 
     def __init__(
         self,
-        ckpt: Path | str,
-        eyelids_ckpt: Path | str | None = None,
+        ckpt: Union[Path, str],
+        eyelids_ckpt: Union[Path, str, None] = None,
     ) -> None:
         """A tiny version of the FLAME model that is compatible with ONNX."""
         super().__init__()
@@ -49,7 +50,7 @@ class TinyFlame(nn.Module):
         expression: torch.Tensor,
         pose: torch.Tensor,
         translation: torch.Tensor,
-        eyelids: torch.Tensor | None = None,
+        eyelids: Union[torch.Tensor, None] = None,
     ) -> torch.Tensor:
         """Convert FLAME parameters to coordinates of FLAME vertices.
 

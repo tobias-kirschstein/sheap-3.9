@@ -7,7 +7,7 @@ name = "sheap"
 version = "0.1.0"
 description = "SHeaP: Self-Supervised Head Geometry Predictor Learned via 2D Gaussians"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 license = { file = "LICENSE.txt" }
 authors = [
     { name = "Liam Schoneveld" }

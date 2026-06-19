@@ -8,7 +8,7 @@ from PIL import Image
 from sheap import inference_images_list, load_sheap_model, render_mesh
 from sheap.tiny_flame import TinyFlame, pose_components_to_rotmats
 
-os.environ["PYOPENGL_PLATFORM"] = "egl"
+# os.environ["PYOPENGL_PLATFORM"] = "egl"
 
 
 def create_rendering_image(
@@ -63,6 +63,8 @@ if __name__ == "__main__":
             model=sheap_model,
             device=device,
             image_paths=image_paths,
+            batch_size=1,
+            num_workers=0,
         )
 
     # Load and infer FLAME with our predicted parameters
