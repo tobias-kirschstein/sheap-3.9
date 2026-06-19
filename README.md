@@ -1,3 +1,14 @@
+Port of `SHeaP` that works with `Python>=3.9` and does not force a specific torch version upon installation.
+
+Install via 
+```shell
+pip install git+https://github.com/tobias-kirschstein/sheap-3.9.git
+```
+
+Original README below
+
+<hr>
+
 <div align="center">
 <h1>🐑 SHeaP 🐑</h1>
 <h2>Self-Supervised Head Geometry Predictor Learned via 2D Gaussians</h2>
